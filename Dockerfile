@@ -8,6 +8,9 @@ RUN \
     rm -rf /var/log/mldonkey && \
     rm /var/lib/mldonkey/*
 
+COPY start.sh /start.sh
+RUN chmod -v +x /start.sh
+
 USER mldonkey
 
 ENV MLDONKEY_DIR /var/lib/mldonkey
@@ -17,6 +20,4 @@ VOLUME ["/var/lib/mldonkey", "/mnt/mldonkey_tmp", \
 
 EXPOSE 4001 4080 20562 20566/udp 6209 6209/udp 16965/udp 3617/udp 6881 6882
 
-ADD start.sh /start.sh
-RUN chmod -v +x /start.sh
 CMD /start.sh
