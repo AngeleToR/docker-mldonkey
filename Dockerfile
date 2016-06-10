@@ -1,4 +1,5 @@
 FROM debian:stretch
+MANTAINER angel@autorizado.net
 
 RUN \
     apt-get update && \
@@ -8,10 +9,14 @@ RUN \
     rm /var/lib/mldonkey/*
 
 USER mldonkey
+
 ENV MLDONKEY_DIR /var/lib/mldonkey
-VOLUME /var/lib/mldonkey
-VOLUME /mnt/mldonkey_tmp
-VOLUME /mnt/mldonkey_completed
+
+VOLUME ["/var/lib/mldonkey", "/mnt/mldonkey_tmp", \
+        "/mnt/mldonkey_completed"]
+
 EXPOSE 4001 4080 20562 20566/udp 6209 6209/udp 16965/udp 3617/udp 6881 6882
-ADD start.sh /
+
+COPY start.sh /start.sh
+RUN chmod +x /start.sh
 CMD /start.sh
