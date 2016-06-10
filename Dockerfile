@@ -1,5 +1,5 @@
 FROM debian:stretch
-MANTAINER angel@autorizado.net
+MAINTAINER Angel Cezon <angel@autorizado.net>
 
 RUN \
     apt-get update && \
