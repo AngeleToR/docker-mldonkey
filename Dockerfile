@@ -8,11 +8,6 @@ RUN \
     rm -rf /var/log/mldonkey && \
     rm /var/lib/mldonkey/*
 
-COPY start.sh /start.sh
-RUN chmod -v +x /start.sh
-
-USER mldonkey
-
 ENV MLDONKEY_DIR /var/lib/mldonkey
 
 VOLUME ["/var/lib/mldonkey", "/mnt/mldonkey_tmp", \
