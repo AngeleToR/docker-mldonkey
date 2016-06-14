@@ -10,13 +10,11 @@ Modified with my preferred ports:
 - Bittorrent:	3617/udp 6881/tcp 6882/tcp
 - Admin:		4001/tcp
 
+WARNING!!! If you change these ports in the EXPORT you will later on have to change them in MLDonkey, via telnet, editing its .ini files or whatever means you prefer
+
 Also uses three volumes, first one for config files, second one for temp files while downloading and third one for completed downloaded files.
 - /var/lib/mldonkey
 - /mnt/mldonkey_tmp
 - /mnt/mldonkey_completed
 
-Will also setup lots of basic and some advanced stuff, change to your liking via web upon startup
-
----------------------------------------------------------
--STILL UNDER DEVELOPMENT, USE AT YOUR OWN RISK!!!!!!!!!!-
----------------------------------------------------------
+Will also setup lots of basic and some advanced stuff, change to your liking via web upon startup. Inside the docker container it deletes any existing mldonkey user/group and creates a new one with uid&gid 2001 to match my system.
