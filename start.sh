@@ -29,6 +29,7 @@ if [ ! -f /var/lib/mldonkey/downloads.ini ]; then
     /usr/lib/mldonkey/mldonkey_command -p "" "set BT-client_port 6882" "save"
     /usr/lib/mldonkey/mldonkey_command -p "" "set BT-tracker_port 6881" "save"
     /usr/lib/mldonkey/mldonkey_command -p "" "set BT-dht_port 3617" "save"
+    /usr/lib/mldonkey/mldonkey_command -p "" "set gui_port 4000" "save"
     /usr/lib/mldonkey/mldonkey_command -p "" "set max_concurrent_downloads 150" "save"
     /usr/lib/mldonkey/mldonkey_command -p "" "set filenames_utf8 true" "save"
     /usr/lib/mldonkey/mldonkey_command -p "" "set create_file_mode 664" "save"

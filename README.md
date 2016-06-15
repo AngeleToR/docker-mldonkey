@@ -1,14 +1,14 @@
 # docker-mldonkey
 MLdonkey docker with BT, emule, UI, Kad and HTTP ports open. Based on cheungpat's work.
 
-Uses stretch package(version 3.1.5-3) instead of older wheezy(version 3.1.2-1)
+Uses Debian stretch package(version 3.1.5-3) instead of older wheezy(version 3.1.2-1)
 
 Modified with my preferred ports:
 - edonkey:		20562/tcp 20566/udp
 - Overnet:		6209/both
 - Kad:			16965/udp
 - Bittorrent:	3617/udp 6881/tcp 6882/tcp
-- Admin:		4001/tcp
+- Admin:		4000/tcp
 
 WARNING!!! If you change these ports in the EXPORT you will later on have to change them in MLDonkey, via telnet, editing its .ini files or whatever means you prefer
 
