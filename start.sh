@@ -4,7 +4,7 @@ if [ ! -f /var/lib/mldonkey/downloads.ini ]; then
     userdel -f mldonkey
     groupdel mldonkey
     groupadd -g 2001 mldonkey
-    useradd -M -u 2001 -g 2001 mldonkey
+    useradd -M -u 2001 -g 2001 -d /var/lib/mldonkey mldonkey
     mldonkey &
     echo "Waiting for mldonkey to start..."
     sleep 5
